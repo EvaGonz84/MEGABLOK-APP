@@ -1,7 +1,7 @@
-import React from "react";
+import PopUp from "../../components/popUp/PopUp";
 
 const ConfigNumberPage = () => {
-  return <div>ConfigNumberPage</div>;
+  return <PopUp />;
 };
 
 export default ConfigNumberPage;
