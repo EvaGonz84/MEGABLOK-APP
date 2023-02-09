@@ -6,12 +6,13 @@ const mobile = `@media (max-width: ${desktopStartWidth}px)`;
 
 export const Container = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
 `;
 
-export const PopUpContainer = styled.section`
+export const PopUpContainer = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: center;
