@@ -1,6 +1,6 @@
-import { PopUpContainer, Input, Button, ImgLogo } from "./Form.styles";
+import { PopUpContainer, Input, ImgLogo, Button } from "./Form.styles";
 import imgLogo from "../../assets/images/logo.png";
-import { useContext } from "react";
+import { useContext, useInsertionEffect } from "react";
 import { UserContext } from "../../context/UserProvider";
 import { useNavigate } from "react-router-dom";
 
@@ -9,7 +9,7 @@ const Form = () => {
   //Global state for the input value
   const { registered, setRegistered } = useContext(UserContext);
 
-  //Function that stores the input value in the state
+  //Function that stores the input value in the state (Pending validations!!)
   const handleInputChange = (e) => {
     const serialNumber = e.target.value;
     setRegistered(serialNumber);
@@ -21,14 +21,16 @@ const Form = () => {
     navigate("/home");
   };
   return (
-    <PopUpContainer onSubmit={saveSerialNumber}>
+    <PopUpContainer>
       <ImgLogo src={imgLogo} alt="megablok-logo" />
       <Input
         type="text"
         placeholder="Introduce el número de serie"
         onChange={handleInputChange}
       />
-      <Button type="button">Continúa</Button>
+      <Button type="button" onClick={saveSerialNumber}>
+        Continúa
+      </Button>
     </PopUpContainer>
   );
 };

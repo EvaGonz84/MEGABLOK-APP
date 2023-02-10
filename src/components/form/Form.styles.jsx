@@ -47,7 +47,6 @@ export const Input = styled.input`
     background-color: white;
   }
 `;
-
 export const Button = styled.button`
   background-color: #ce2519;
   color: white;
@@ -60,11 +59,12 @@ export const Button = styled.button`
   letter-spacing: 1px;
 
   ${mobile} {
-    padding: 8px 18px;
+    padding: 8px 14px;
     font-size: 16px;
   }
 
   &:hover {
     background-color: #ac150a;
+    transition: 0.5s all ease;
   }
 `;
